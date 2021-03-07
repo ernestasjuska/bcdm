@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="ReferenceAssemblies\Microsoft.Dynamics.Nav.CodeAnalysis.dll" />
+    <Compile Include="NavMetadata.fs" />
+    <Compile Include="GenerateSymbolsCommand.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Collections.Immutable" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
+      <HintPath>ReferenceAssemblies\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
